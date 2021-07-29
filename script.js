@@ -26,7 +26,6 @@ board.addEventListener('click', (event) => {
         score++
         event.target.remove()
         createRandomCircle()
-        time += 1
     }
 })
 
@@ -59,7 +58,7 @@ function finishGame() {
 
 function createRandomCircle() {
     const circle = document.createElement('div')
-    const size = getRandomNumber(5, 40)
+    const size = getRandomNumber(5, 60)
     const {width, height} = board.getBoundingClientRect()
     const x = getRandomNumber(0, width - size)
     const y = getRandomNumber(0, height - size)
